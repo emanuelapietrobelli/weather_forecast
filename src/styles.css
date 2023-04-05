@@ -63,21 +63,21 @@ h6 {
 .col-1{
   display: grid;
   padding: 0;
-  width: 50px;
+  width: 25px;
   
 }
-.locationIcon{
-display:inline-grid;
+.locationIcon {
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
 }
 
-
-.locationIcon:hover{
-  border-radius: 30px;
+.locationIcon:hover {
+  border-radius: 50%;
   padding: 5px;
   border: 0;
   background-color: #ddd;
   cursor: crosshair;
-  
 }
 
 
