@@ -1,0 +1,139 @@
+body {
+  background-color: #e9ebee;
+}
+
+h3,
+h4,
+h5 {
+  color: #5a6275;
+  margin: 0;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 8px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.container-main {
+  max-width: 720px;
+  background-color: white;
+  padding: 50px 50px 50px;
+  margin: 70px auto;
+  border-radius: 5px;
+}
+
+.container-header {
+  padding-bottom: 0px;
+}
+.buttonLocation{
+  border-radius: 30px;
+  padding: 0.375rem 10px;
+  
+  border: 0;
+  
+}
+
+
+.col-1{
+  display: grid;
+  padding: 0;
+  width: 50px;
+  
+}
+.locationIcon{
+display:inline-grid;
+}
+
+
+.locationIcon:hover{
+  border-radius: 30px;
+  padding: 5px;
+  border: 0;
+  background-color: #ddd;
+  cursor: crosshair;
+  
+}
+
+
+.form-control {
+  border-radius: 30px;
+  padding: 0.375rem 20.75px;
+  background-color: #fbfbfc;
+  border: 0;
+  
+}
+
+.text-align-left {
+  text-align: left;
+  padding: 0;
+}
+
+.city-icon {
+  margin-bottom: 10px;
+}
+.icon {
+  position: relative;
+  top: 40px;
+}
+.container-inside {
+  background-color: #fbfbfc;
+  max-width: 620px;
+  padding: 35px 0 35px 0;
+  border-radius: 5px;
+}
+.align-padding {
+  display: grid;
+  justify-content: space-around
+}
+
+.temp-col {
+  display: flow-root;
+  justify-content: space-around
+}
+.temperature {
+  font-size: 64px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 0 0 20px;
+}
+.units {
+  position: relative;
+  top: -30px;
+}
+
+.gx-4 {
+  margin: 40px;
+}
+.days {
+  background-color: #fbfbfc;
+  border-radius: 30px;
+  width: fit-content;
+  margin: 0px 0px 0px 12px;
+  padding: 15px 15px;
+}

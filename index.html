@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="container-header">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-6">
+            <h3>Weather Forecast</h3>
+            <h4 id="display-current-date">Friday 03, March 2023</h4>
+          </div>
+
+          <div class="col-1" >
+          
+            <input type="image" src="images/location_icon.svg" alt="Submit" width="60" height="30" 
+            id="current-location-button" class="locationIcon">
+
+          </div>
+
+          <div class="col-5">
+            <form id= "search-city-form"> 
+              <input           
+                type="city"
+                class="form-control"
+               placeholder="Search another city"
+                id="search-city-input" 
+                required
+              />
+              </form>
+          </div>
+      
+      </div>
+        <div class="container">
+          <div class="row city-icon">
+          <div class="col text-align-left align-self-end">
+            <h2 id="city-name"></h2>
+          </div>
+          <div class="col-2 icon">
+            <img src="images/sun_icon.svg" class="img-fluid" alt="sun icon" />
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+      <div class="container-inside">
+        <div class="container text-left">
+          <div class="row align-items-center">
+            <div class="col align-padding">
+              <h5>Humidity</h5>
+              <h3 id="humidity"></h3>
+            </div>
+            <div class="col temp-col">
+          
+              <span class="temperature" id="temperature"></span>
+              <span class="units">
+                ˚C 
+              
+              </span>
+            
+            </div>
+            <div class="col align-padding">
+              <h5>Wind</h5>
+              <h3 id="wind"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden text-center">
+        <div class="row gx-4">
+          <div class="col next-days">
+            <div class="days shadow-sm bg-body-tertiary">
+              <h5>
+                Mon <br /> <br />
+                <img
+                  src="images/sun_icon.svg"
+                  class="img-fluid"
+                  alt="sun icon"
+                />
+                <br /> <br />
+                27˚
+              </h5>
+            </div>
+          </div>
+           <div class="col next-days">
+            <div class="days shadow-sm bg-body-tertiary">
+              <h5>
+                Mon <br /> <br />
+                <img
+                  src="images/sun_icon.svg"
+                  class="img-fluid"
+                  alt="sun icon"
+                />
+                <br /> <br />
+                27˚
+              </h5>
+            </div>
+          </div> 
+          <div class="col next-days">
+            <div class="days shadow-sm bg-body-tertiary">
+              <h5>
+                Mon <br /> <br />
+                <img
+                  src="images/sun_icon.svg"
+                  class="img-fluid"
+                  alt="sun icon"
+                />
+                <br /> <br />
+                27˚
+              </h5>
+            </div>
+          </div> 
+          <div class="col next-days">
+            <div class="days shadow-sm bg-body-tertiary">
+              <h5>
+                Mon <br /> <br />
+                <img
+                  src="images/sun_icon.svg"
+                  class="img-fluid"
+                  alt="sun icon"
+                />
+                <br /> <br />
+                27˚
+              </h5>
+            </div>
+          </div>
+           <div class="col next-days">
+            <div class="days shadow-sm bg-body-tertiary">
+              <h5>
+                Mon <br /> <br />
+                <img
+                  src="images/sun_icon.svg"
+                  class="img-fluid"
+                  alt="sun icon"
+                />
+                <br /> <br />
+                27˚
+              </h5>
+            </div>
+          </div>
+          </div>
+        </div>
+        <h6>This project was coded by Emanuela Pietrobelli and is open-sourced on GitHub</h6>
+      </div>
+      
+
+    </div>
+
+<script src="src/script.js"></script>
+
+  </body>
+</html>
