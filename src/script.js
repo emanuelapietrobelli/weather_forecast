@@ -55,11 +55,6 @@ currentDate.innerHTML = formatDate(today);
 // SEARCH CITY INPUT
 
 function displayWeatherCondition(response) {
-  console.log(response.data)
-  console.log(response.data.temperature.current);
-  console.log(response.data.city);
-  console.log(response.data.temperature.humidity);
-  console.log(response.data.wind.speed);
 
   document.querySelector("#city-name").innerHTML = response.data.city
 
@@ -69,7 +64,7 @@ function displayWeatherCondition(response) {
   let humidity = response.data.temperature.humidity;
   document.querySelector("#humidity").innerHTML = `${humidity}%`
   
-  let wind = Math.round(response.data.wind.speed*3.6) // is meter per seconds = *3.6 km/h??
+  let wind = Math.round(response.data.wind.speed) 
   document.querySelector("#wind").innerHTML = `${wind}km/h`
 }
 
