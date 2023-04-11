@@ -56,29 +56,30 @@ currentDate.innerHTML = formatDate(today);
 
 function displayWeatherCondition(response) {
   console.log(response.data)
-  console.log(response.data.main.temp);
-  console.log(response.data.name);
-  console.log(response.data.main.humidity);
+  console.log(response.data.temperature.current);
+  console.log(response.data.city);
+  console.log(response.data.temperature.humidity);
   console.log(response.data.wind.speed);
 
-  document.querySelector("#city-name").innerHTML = response.data.name
+  document.querySelector("#city-name").innerHTML = response.data.city
 
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(response.data.temperature.current);
   document.querySelector("#temperature").innerHTML = `${temperature}`
 
-  let humidity = response.data.main.humidity
+  let humidity = response.data.temperature.humidity;
   document.querySelector("#humidity").innerHTML = `${humidity}%`
-
   
   let wind = Math.round(response.data.wind.speed*3.6) // is meter per seconds = *3.6 km/h??
   document.querySelector("#wind").innerHTML = `${wind}km/h`
 }
 
+
 function search(city){
-  let apikey = `445905dadb3d2b0c6f1b916c9d0e3860`;
+  let apikey = `54dfafe0odf6d0ff9b243ctbada790a3`;
   let units = `metric`;
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=${units}`;
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apikey}&units=${units}`
   axios.get(url).then(displayWeatherCondition);
+
 }
 
 function handleSubmit(event){
