@@ -96,21 +96,18 @@ search ("Berlin")
 // currently LOCATION BUTTON
 
 function showPosition(position) {
-  let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let apikey = `445905dadb3d2b0c6f1b916c9d0e3860`;
+  let latitude = position.coords.latitude;
+  let apikey = `54dfafe0odf6d0ff9b243ctbada790a3`;
   let units = `metric`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=${units}`;
-
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apikey}&units=${units}`  ;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
 function getCurrentPosition(){
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-
 let button = document.querySelector("#current-location-button")
-button.addEventListener("click", getCurrentPosition)
+button.addEventListener("click", getCurrentPosition());
 
 // currently LOCATION BUTTON
 
