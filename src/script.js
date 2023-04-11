@@ -98,7 +98,7 @@ search ("Berlin")
 function showPosition(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
-  let apikey = `54dfa93065b856fb699c1cd97e0803c3`;
+  let apikey = `54dfafe0odf6d0ff9b243ctbada790a3`;
   let units = `metric`;
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apikey}&units=${units}`  ;
   
