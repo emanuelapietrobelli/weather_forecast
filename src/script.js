@@ -57,7 +57,7 @@ currentDate.innerHTML = formatDate(today);
 function displayWeatherCondition(response) {
 
   document.querySelector("#city-name").innerHTML = response.data.city
-document.querySelector(`#condition-description`).innerHTML = response.data.condition.description
+  document.querySelector("#condition-description").innerHTML = response.data.condition.description
 
 
   let temperature = Math.round(response.data.temperature.current);
@@ -68,6 +68,12 @@ document.querySelector(`#condition-description`).innerHTML = response.data.condi
   
   let wind = Math.round(response.data.wind.speed) 
   document.querySelector("#wind").innerHTML = `${wind}km/h`
+
+  let mainIcon = document.querySelector("#main-icon");
+  mainIcon.setAttribute ("src", `${response.data.condition.icon_url}`);
+
+  
+
 }
 
 

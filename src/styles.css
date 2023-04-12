@@ -94,17 +94,15 @@ h6 {
 }
 
 .text-align-left {
-  text-align: left;
   padding: 0;
 }
 
-.city-icon {
-  margin-bottom: 10px;
-}
 .icon {
   position: relative;
   top: 40px;
 }
+
+
 .container-inside {
   background-color: #fbfbfc;
   max-width: 620px;
