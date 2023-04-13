@@ -114,18 +114,19 @@ h6 {
   justify-content: space-around
 }
 
-.temp-col {
+.current-temperature {
   text-align: center;
   padding-left: 30px;
 }
-.temperature {
+.current-temperature .temperature {
   font-size: 64px;
   font-weight: 500;
 
 }
-.units {
+.current-temperature .units {
   position: relative;
   top: -30px;
+ 
 }
 
 .gx-4 {
@@ -137,4 +138,22 @@ h6 {
   width: fit-content;
   margin: 0px 0px 0px 12px;
   padding: 15px 15px;
+}
+
+.current-temperature .active{
+  color: black;
+  cursor: default;
+  text-decoration: none;
+  font-kerning: auto;
+}
+
+.current-temperature .active:hover{
+  text-decoration: none;
+  cursor: default;
+}
+.non-active{
+  color: blue;
+  text-decoration: none;
+  cursor: default;
+  font-kerning: auto;
 }

@@ -64,6 +64,8 @@ function displayWeatherCondition(response) {
   let temperature = Math.round(response.data.temperature.current);
   document.querySelector("#temperature").innerHTML = `${temperature}`;
 
+  celciusTemperature = temperature;
+
   let humidity = response.data.temperature.humidity;
   document.querySelector("#humidity").innerHTML = `${humidity}%`;
   
@@ -74,10 +76,6 @@ function displayWeatherCondition(response) {
   document.querySelector("#main-icon").setAttribute ("src", `${apiIcon}`);
 
   document.querySelector("#main-icon").setAttribute ("alt", `${description}`);
-
-
-
-  
 
 }
 
@@ -100,7 +98,7 @@ let searchCityType = document.querySelector("#search-city-form");
 searchCityType.addEventListener("submit",handleSubmit);
 
 
-search ("Berlin")
+
 
 
 // SEARCH CITY INPUT
@@ -125,19 +123,47 @@ button.addEventListener("click", getCurrentPosition);
 // currently LOCATION BUTTON
 
 
-
-
-
-
 // TEMPERATURE
 
 
-//function changeCelcius(event){
-//  event.preventDefault();
-//let celciusTemperature = document.querySelector("#temperature");
-//celciusTemperature.innerHTML = `19`/
-//}
-//let toCelcius = document.querySelector("#celcius-link");
-//toCelcius.addEventListener("click", changeCelcius);
+function displayFahrenheitTemperature(event){
+  event.preventDefault();
 
-// TEMPERATURE
+  celciusLink.classList.remove("active");
+  celciusLink.classList.add("non-active");
+  
+  fahrenheitLink.classList.add("active");
+
+  let temperature = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celciusTemperature*9)/5+32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+
+}
+
+
+function displayCelciusTemperature(event){
+  event.preventDefault();
+
+  
+  fahrenheitLink.classList.remove("active");
+  fahrenheitLink.classList.add("non-active");
+
+  celciusLink.classList.add("active")
+
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = celciusTemperature;
+
+}
+
+let celciusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link")
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link")
+celciusLink.addEventListener("click", displayCelciusTemperature);
+
+
+
+search ("Berlin")
+
