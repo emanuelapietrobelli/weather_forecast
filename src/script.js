@@ -56,21 +56,26 @@ currentDate.innerHTML = formatDate(today);
 
 function displayWeatherCondition(response) {
 
-  document.querySelector("#city-name").innerHTML = response.data.city
-  document.querySelector("#condition-description").innerHTML = response.data.condition.description
+  document.querySelector("#city-name").innerHTML = response.data.city;
 
+  let description = response.data.condition.description;
+  document.querySelector("#condition-description").innerHTML = `${description}`;
 
   let temperature = Math.round(response.data.temperature.current);
-  document.querySelector("#temperature").innerHTML = `${temperature}`
+  document.querySelector("#temperature").innerHTML = `${temperature}`;
 
   let humidity = response.data.temperature.humidity;
-  document.querySelector("#humidity").innerHTML = `${humidity}%`
+  document.querySelector("#humidity").innerHTML = `${humidity}%`;
   
-  let wind = Math.round(response.data.wind.speed) 
-  document.querySelector("#wind").innerHTML = `${wind}km/h`
+  let wind = Math.round(response.data.wind.speed);
+  document.querySelector("#wind").innerHTML = `${wind}km/h`;
 
-  let mainIcon = document.querySelector("#main-icon");
-  mainIcon.setAttribute ("src", `${response.data.condition.icon_url}`);
+  let apiIcon = response.data.condition.icon_url;
+  document.querySelector("#main-icon").setAttribute ("src", `${apiIcon}`);
+
+  document.querySelector("#main-icon").setAttribute ("alt", `${description}`);
+
+
 
   
 
@@ -87,8 +92,8 @@ function search(city){
 
 function handleSubmit(event){
   event.preventDefault();  
-  let city = document.querySelector("#search-city-input").value 
- search(city);
+  let city = document.querySelector("#search-city-input")
+  search(city.value);
 }
 
 let searchCityType = document.querySelector("#search-city-form");
