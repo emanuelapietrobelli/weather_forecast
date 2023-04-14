@@ -144,6 +144,7 @@ h6 {
 .current-temperature .active:hover {
   text-decoration: none;
   cursor: default;
+  transform: scale(115%);
 }
 .non-active {
   color: blue;
