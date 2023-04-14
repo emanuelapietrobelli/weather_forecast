@@ -22,7 +22,7 @@ h3 {
   font-size: 20px;
 }
 
-h3::first-letter{
+h3::first-letter {
   text-transform: capitalize;
 }
 
@@ -55,42 +55,38 @@ h6 {
 .container-header {
   padding-bottom: 0px;
 }
-.buttonLocation{
+.buttonLocation {
   border-radius: 30px;
   padding: 0.375rem 10px;
-  
+
   border: 0;
-  
 }
 
-
-.col-1{
+.col-1 {
   display: grid;
-  padding: 0;
+
   width: 25px;
-  
 }
 .locationIcon {
   display: inline-grid;
+  opacity: 50%;
   width: 30px;
   height: 30px;
+  transition: transform 450ms;
 }
 
 .locationIcon:hover {
-  border-radius: 50%;
-  padding: 5px;
-  border: 0;
-  background-color: #ddd;
+  transition: transform 125ms;
+  opacity: 80%;
+  transform: scale(115%);
   cursor: crosshair;
 }
-
 
 .form-control {
   border-radius: 30px;
   padding: 0.375rem 20.75px;
   background-color: #fbfbfc;
   border: 0;
-  
 }
 
 .text-align-left {
@@ -110,7 +106,7 @@ h6 {
 }
 .align-padding {
   display: grid;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .current-temperature {
@@ -120,12 +116,10 @@ h6 {
 .current-temperature .temperature {
   font-size: 64px;
   font-weight: 500;
-
 }
 .current-temperature .units {
   position: relative;
   top: -30px;
- 
 }
 
 .gx-4 {
@@ -140,18 +134,18 @@ h6 {
   padding: 15px 15px;
 }
 
-.current-temperature .active{
+.current-temperature .active {
   color: black;
   cursor: default;
   text-decoration: none;
   font-kerning: auto;
 }
 
-.current-temperature .active:hover{
+.current-temperature .active:hover {
   text-decoration: none;
   cursor: default;
 }
-.non-active{
+.non-active {
   color: blue;
   text-decoration: none;
   cursor: default;
