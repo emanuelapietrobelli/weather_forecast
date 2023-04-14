@@ -95,7 +95,14 @@ h6 {
 
 .icon {
   position: relative;
-  top: 40px;
+  top: 10px;
+  right: 8px;
+  padding: 0;
+  height: 80px;
+}
+
+.weather-icon {
+  width: 130px;
 }
 
 .container-inside {
