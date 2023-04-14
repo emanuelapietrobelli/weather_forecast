@@ -102,7 +102,6 @@ h6 {
   top: 40px;
 }
 
-
 .container-inside {
   background-color: #fbfbfc;
   max-width: 620px;
@@ -132,6 +131,7 @@ h6 {
 .gx-4 {
   margin: 40px;
 }
+
 .days {
   background-color: #fbfbfc;
   border-radius: 30px;

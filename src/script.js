@@ -97,10 +97,6 @@ function handleSubmit(event){
 let searchCityType = document.querySelector("#search-city-form");
 searchCityType.addEventListener("submit",handleSubmit);
 
-
-
-
-
 // SEARCH CITY INPUT
 
 
@@ -125,7 +121,6 @@ button.addEventListener("click", getCurrentPosition);
 
 // TEMPERATURE
 
-
 function displayFahrenheitTemperature(event){
   event.preventDefault();
 
@@ -140,11 +135,9 @@ function displayFahrenheitTemperature(event){
 
 }
 
-
 function displayCelciusTemperature(event){
   event.preventDefault();
 
-  
   fahrenheitLink.classList.remove("active");
   fahrenheitLink.classList.add("non-active");
 
@@ -162,7 +155,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celciusLink = document.querySelector("#celcius-link")
 celciusLink.addEventListener("click", displayCelciusTemperature);
-
 
 
 search ("Berlin")
