@@ -79,8 +79,8 @@ if (index < 6)
       
     />
       <div class="weather-forecast-temperatures">
-      <div class="weather-forecast-temperature-max">${Math.round(forecastDay.temperature.maximum)}˚</div>
-      <div class="weather-forecast-temperature-min">${Math.round(forecastDay.temperature.minimum)}˚</div>
+      <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temperature.maximum)}˚</span>
+      <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temperature.minimum)}˚</span>
       </div>  
     </div>
   </div>

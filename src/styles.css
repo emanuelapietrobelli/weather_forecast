@@ -1,5 +1,28 @@
 body {
-  background-color: #e9ebee;
+  
+  background-size: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-image: repeating-linear-gradient(
+  140deg,
+  hsl(55deg 96% 91%) 0%,
+  hsl(51deg 97% 90%) 5%,
+  hsl(47deg 97% 89%) 9%,
+  hsl(42deg 98% 88%) 14%,
+  hsl(38deg 99% 87%) 19%,
+  hsl(34deg 99% 86%) 23%,
+  hsl(30deg 99% 85%) 28%,
+  hsl(26deg 100% 84%) 34%,
+  hsl(22deg 99% 83%) 39%,
+  hsl(18deg 97% 82%) 45%,
+  hsl(14deg 95% 81%) 51%,
+  hsl(9deg 93% 80%) 57%,
+  hsl(5deg 91% 79%) 64%,
+  hsl(1deg 90% 78%) 72%,
+  hsl(356deg 88% 77%) 82%,
+  hsl(352deg 87% 76%) 100%
+);
+
 }
 
 h3,
@@ -46,7 +69,7 @@ h6 {
 
 .container-main {
   max-width: 720px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 50px 50px 50px;
   margin: 70px auto;
   border-radius: 5px;
@@ -145,7 +168,7 @@ h6 {
 .weather-forecast-temperatures{
   color: #5a6275;
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 350;
   padding-left: 5px;
 }
