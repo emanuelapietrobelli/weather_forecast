@@ -50,13 +50,15 @@ currentDate.innerHTML = formatDate(today);
 // CURRENT DATE
 
 // FORECAST
-function displayForecast(){
+function displayForecast(response){
+console.log(response.data.daily);
+
 let forecastElement = document.querySelector("#forecast");
 
-let forecastHTML = `<div class="row gx-4">`;
 let days = ["Mon","Tur","Wed", "Thu", "Fri"];
-days.forEach(function(day){
+let forecastHTML = `<div class="row gx-4">`;
 
+days.forEach(function(day){
 
   forecastHTML = forecastHTML + `
   <div class="col-2 next-days">
@@ -80,7 +82,16 @@ forecastHTML = forecastHTML +`</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(cityForecast){
+  console.log(cityForecast);
 
+  let apikey = `54dfafe0odf6d0ff9b243ctbada790a3`;
+  let units = `metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${cityForecast}&key=${apikey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+//
 // SEARCH CITY INPUT
 
 function displayWeatherCondition(response) {
@@ -104,6 +115,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#main-icon").setAttribute("src", `${apiIcon}`);
 
   document.querySelector("#main-icon").setAttribute("alt", `${description}`);
+
+  getForecast(response.data.city);
 
   // if i designed my own icons, i can use this code to change the icons accord to the API condition/icon
   //let iconApiRefence = response.data.condition.icon;
@@ -182,4 +195,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("Berlin");
-displayForecast();
+
