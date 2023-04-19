@@ -50,27 +50,37 @@ currentDate.innerHTML = formatDate(today);
 // CURRENT DATE
 
 // FORECAST
-function displayForecast(response){
-console.log(response.data.daily);
 
+function formatDay (timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+
+  return days[day];
+}
+
+function displayForecast(response){
 let forecastElement = document.querySelector("#forecast");
 
-let days = ["Mon","Tur","Wed", "Thu", "Fri"];
-let forecastHTML = `<div class="row gx-4">`;
+let forecast = (response.data.daily);
+let forecastHTML = `<div class="row p-5">`;
+let maxTemperature = 
 
-days.forEach(function(day){
-
+forecast.forEach(function(forecastDay, index){
+if (index < 6)
   forecastHTML = forecastHTML + `
-  <div class="col-2 next-days">
-    <div class="days-box shadow-sm bg-body-tertiary">
-    <h5>${day}</h5>
+  <div class="col-2">
+    <div class="days-box shadow-sm">
+    <h5>${formatDay(forecastDay.time)}</h5>
     <img
-      src="images/sun_icon.svg"
-      class="icon-forecast img-fluid"
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
+      class="icon-forecast"
       alt="sun icon"
+      
     />
       <div class="weather-forecast-temperatures">
-      <span class="weather-forecast-temperature-max"> 27˚</span>
+      <div class="weather-forecast-temperature-max">${Math.round(forecastDay.temperature.maximum)}˚</div>
+      <div class="weather-forecast-temperature-min">${Math.round(forecastDay.temperature.minimum)}˚</div>
       </div>  
     </div>
   </div>

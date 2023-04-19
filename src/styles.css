@@ -130,28 +130,34 @@ h6 {
 }
 
 .gx-4 {
-  margin: 40px;
+  margin-top: 40px;
+ margin-bottom: 40px;
 }
 
 .days-box {
   background-color: #fbfbfc;
-  border-radius: 30px;
+  border-radius: 35px;
   text-align: center;
   width: fit-content;
-  margin: 0px 0px 0px 12px;
-  padding: 15px 15px;
+  padding: 15px 0px;
 }
 
 .weather-forecast-temperatures{
   color: #5a6275;
   margin: 0;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 350;
+  padding-left: 5px;
+}
+
+.weather-forecast-temperature-max{
+  color: black;
 }
 
 .icon-forecast{
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 60px;
 }
 
 .current-temperature .active {
