@@ -49,6 +49,38 @@ currentDate.innerHTML = formatDate(today);
 
 // CURRENT DATE
 
+// FORECAST
+function displayForecast(){
+let forecastElement = document.querySelector("#forecast");
+
+let forecastHTML = `<div class="row gx-4">`;
+let days = ["Mon","Tur","Wed", "Thu", "Fri"];
+days.forEach(function(day){
+
+
+  forecastHTML = forecastHTML + `
+  <div class="col-2 next-days">
+    <div class="days-box shadow-sm bg-body-tertiary">
+    <h5>${day}</h5>
+    <img
+      src="images/sun_icon.svg"
+      class="icon-forecast img-fluid"
+      alt="sun icon"
+    />
+      <div class="weather-forecast-temperatures">
+      <span class="weather-forecast-temperature-max"> 27˚</span>
+      </div>  
+    </div>
+  </div>
+`;
+
+});
+
+forecastHTML = forecastHTML +`</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
+
 // SEARCH CITY INPUT
 
 function displayWeatherCondition(response) {
@@ -150,3 +182,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("Berlin");
+displayForecast();
