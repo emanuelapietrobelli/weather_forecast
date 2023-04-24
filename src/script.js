@@ -41,8 +41,9 @@ function formatDate(date) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-
+  
   return `${dayWeek} ${dayNumber}, ${month} ${year}, ${hours}:${min}`;
+
 }
 let currentDate = document.querySelector("#display-current-date");
 currentDate.innerHTML = formatDate(today);
@@ -64,7 +65,6 @@ let forecastElement = document.querySelector("#forecast");
 
 let forecast = (response.data.daily);
 let forecastHTML = `<div class="row p-5">`;
-let maxTemperature = 
 
 forecast.forEach(function(forecastDay, index){
 if (index < 6)
@@ -75,7 +75,7 @@ if (index < 6)
     <img
       src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
       class="icon-forecast"
-      alt="sun icon"
+      alt=${forecastDay.condition.icon};
       
     />
       <div class="weather-forecast-temperatures">
@@ -105,6 +105,7 @@ function getForecast(cityForecast){
 // SEARCH CITY INPUT
 
 function displayWeatherCondition(response) {
+ console.log(response.data)
   document.querySelector("#city-name").innerHTML = response.data.city;
 
   let description = response.data.condition.description;
@@ -168,7 +169,6 @@ let button = document.querySelector("#current-location-button");
 button.addEventListener("click", getCurrentPosition);
 
 // currently LOCATION BUTTON
-
 
 
 search("Berlin");

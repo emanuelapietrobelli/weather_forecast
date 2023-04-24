@@ -1,5 +1,4 @@
 body {
-  
   background-size: 100%;
   min-height: 100%;
   background-attachment: fixed;
@@ -126,6 +125,10 @@ h6 {
   padding-left: 5px;
 }
 
+.city-name {
+  height: 85px;
+}
+
 .icon {
   position: relative;
   top: 10px;
@@ -141,7 +144,7 @@ h6 {
 .container-inside {
   background-color: rgba(255, 255, 255, 0.3);
   max-width: 620px;
-  padding: 35px 0 35px 0;
+  padding: 20px 0 20px 0;
   border-radius: 10px;
 }
 .align-padding {
@@ -200,14 +203,4 @@ h6 {
   font-kerning: auto;
 }
 
-.current-temperature .active:hover {
-  text-decoration: none;
-  cursor: default;
-  transform: scale(115%);
-}
-.non-active {
-  color: #4593f8;
-  text-decoration: none;
-  cursor: default;
-  font-kerning: auto;
-}
+
