@@ -105,7 +105,6 @@ function getForecast(cityForecast){
 // SEARCH CITY INPUT
 
 function displayWeatherCondition(response) {
- console.log(response.data)
   document.querySelector("#city-name").innerHTML = response.data.city;
 
   let description = response.data.condition.description;
