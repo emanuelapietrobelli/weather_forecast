@@ -3,25 +3,24 @@ body {
   min-height: 100%;
   background-attachment: fixed;
   background-image: repeating-linear-gradient(
-  140deg,
-  hsl(55deg 96% 91%) 0%,
-  hsl(51deg 97% 90%) 5%,
-  hsl(47deg 97% 89%) 9%,
-  hsl(42deg 98% 88%) 14%,
-  hsl(38deg 99% 87%) 19%,
-  hsl(34deg 99% 86%) 23%,
-  hsl(30deg 99% 85%) 28%,
-  hsl(26deg 100% 84%) 34%,
-  hsl(22deg 99% 83%) 39%,
-  hsl(18deg 97% 82%) 45%,
-  hsl(14deg 95% 81%) 51%,
-  hsl(9deg 93% 80%) 57%,
-  hsl(5deg 91% 79%) 64%,
-  hsl(1deg 90% 78%) 72%,
-  hsl(356deg 88% 77%) 82%,
-  hsl(352deg 87% 76%) 100%
-);
-
+    140deg,
+    hsl(55deg 96% 91%) 0%,
+    hsl(51deg 97% 90%) 5%,
+    hsl(47deg 97% 89%) 9%,
+    hsl(42deg 98% 88%) 14%,
+    hsl(38deg 99% 87%) 19%,
+    hsl(34deg 99% 86%) 23%,
+    hsl(30deg 99% 85%) 28%,
+    hsl(26deg 100% 84%) 34%,
+    hsl(22deg 99% 83%) 39%,
+    hsl(18deg 97% 82%) 45%,
+    hsl(14deg 95% 81%) 51%,
+    hsl(9deg 93% 80%) 57%,
+    hsl(5deg 91% 79%) 64%,
+    hsl(1deg 90% 78%) 72%,
+    hsl(356deg 88% 77%) 82%,
+    hsl(352deg 87% 76%) 100%
+  );
 }
 
 h3,
@@ -31,7 +30,11 @@ h5 {
   margin: 0;
 }
 
-h1,h2,h6, .current-temperature, .units{
+h1,
+h2,
+h6,
+.current-temperature,
+.units {
   color: #44486c;
 }
 
@@ -63,7 +66,7 @@ h5 {
 }
 
 h6 {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 300;
   text-align: center;
   margin-top: 10px;
@@ -82,7 +85,6 @@ h6 {
   padding-bottom: 0px;
 }
 
-
 .buttonLocation {
   border-radius: 30px;
   padding: 0.375rem 10px;
@@ -95,7 +97,7 @@ h6 {
   width: 25px;
 }
 
-.col-6{
+.col-6 {
   padding-left: 10px;
 }
 
@@ -167,7 +169,7 @@ h6 {
 
 .gx-4 {
   margin-top: 40px;
- margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .days-box {
@@ -178,7 +180,7 @@ h6 {
   padding: 15px 0px;
 }
 
-.weather-forecast-temperatures{
+.weather-forecast-temperatures {
   color: #44486c;
   margin: 0;
   font-size: 13px;
@@ -186,21 +188,31 @@ h6 {
   padding-left: 5px;
 }
 
-.weather-forecast-temperature-max{
+.weather-forecast-temperature-max {
   color: #282c68;
 }
 
-.icon-forecast{
+.icon-forecast {
   margin-top: 3px;
   margin-bottom: 3px;
   width: 60px;
 }
 
 .current-temperature .active {
-  color:#44486c;
+  color: #44486c;
   cursor: default;
   text-decoration: none;
   font-kerning: auto;
 }
 
+a:link {
+  color: #44486c;
+}
 
+a:visited {
+  color: #44486c;
+}
+
+a:hover {
+  color: rgba(255, 0, 208, 0.622);
+}
